@@ -1,0 +1,24 @@
+{
+  "name": "test",
+  "scripts": {},
+  "browserslist": [
+    "last 2 version",
+    "> 5%",
+    "Android 4.4"
+  ],
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^4.0.3",
+    "autoprefixer": "^10.2.6",
+    "browser-sync": "^2.26.14",
+    "cssbeautify": "^0.3.1",
+    "gulp": "^4.0.2",
+    "gulp-cached": "^1.1.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-connect-php": "1.0.3",
+    "gulp-cssbeautify": "^3.0.0",
+    "gulp-notify": "^4.0.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-postcss": "^9.0.0",
+    "tailwindcss": "^2.1.4"
+  }
+}
