@@ -1,1 +1,7 @@
-# Tailwind
+# Tailwind-local-1
+### フレームワークを使わないphp、プレーンhtml、gulp
+
+`cd Tailwind-local-1`  
+`npm i`  
+`npm run dev`  
+

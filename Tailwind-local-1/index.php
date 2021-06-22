@@ -9,17 +9,18 @@
     <meta name="Keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="format-detection" content="telephone=no">
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png">
+    <link rel="shortcut icon" href="/favicon.ico">
 
     <link rel="stylesheet" href="css/tailwind.css">
+    <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/index.css">
 </head>
 
 <body>
-    <?php include "_components/_l-header.php"; ?>
-    <main class="l-mainContainer">
+<?php include "_components/_l-header.php"; ?>
+<main class="l-mainContainer">
     <section class="text-gray-600 body-font">
         <div class="container px-5 py-24 mx-auto">
             <div class="flex flex-wrap -m-4">
@@ -113,8 +114,17 @@
             </div>
         </div>
     </section>
-    </main>
-    <?php include "_components/_l-footer.php"; ?>
-</body>
 
+    <section class="f-indexOnly container mx-auto">
+        <h2 class="ttl bg-yellow-500">スタイルテスト</h2>
+        <div class="body bg-red-400">
+            <div class="ml-[-10.1rem]">test10</div>
+            <div class="bg-green-400">test20</div>
+            <div class="bg-purple-500">test30</div>
+            <div class="ml-[50.1rem]">test30</div>
+        </div>
+    </section>
+</main>
+<?php include "_components/_l-footer.php"; ?>
+</body>
 </html>

@@ -18,11 +18,10 @@ const minifycss = require('gulp-clean-css');
 
 //
 const path = {
-    views: './**/*.php',
+    view: './**/*.php',
     dev: './dev-css/**/*.css',
     dest: './css/',
 };
-
 
 function cssFunc() {
     return gulp
@@ -46,7 +45,6 @@ function cssFunc() {
         .pipe(browserSync.stream());
 }
 
-
 function connectSync() {
     connect.server(
         {
@@ -69,9 +67,8 @@ function reload(done) {
 }
 
 function watchFiles() {
-    gulp.watch(path.views, reload);
+    gulp.watch(path.view, gulp.series(cssFunc, reload));
     gulp.watch(path.dev, cssFunc);
 }
 
-const watch = gulp.parallel([watchFiles, connectSync]);
-exports.default = watch;
+exports.default = gulp.parallel([watchFiles, connectSync]);
