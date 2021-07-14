@@ -1,6 +1,7 @@
 module.exports = {
   plugins: {
-    '@tailwindcss/jit': {},
+    //   無くても動く！！！　packege.jsonも要らない？
+    // '@tailwindcss/jit': {},
     'autoprefixer': {},
   },
 }

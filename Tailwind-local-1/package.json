@@ -2,8 +2,8 @@
   "name": "test",
   "scripts": {
     "gulp": "gulp --no-notify",
-    "tw-config": "tailwind-config-viewer -o --port 4000",
-    "dev": "npm run gulp & npm run tw-config"
+    "tc": "tailwind-config-viewer -o --port 4000",
+    "dev": "npm run gulp & npm run tc"
   },
   "browserslist": [
     "last 2 version",
