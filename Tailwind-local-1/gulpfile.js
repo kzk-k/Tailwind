@@ -10,8 +10,10 @@ const browserSync = require('browser-sync');
 // css
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
+const postcssImport = require('postcss-import');
+const postcssNested = require('postcss-nested');
 const tailwindcss = require('tailwindcss');
-const tailwindConfig = require("./tailwind.config.js");
+const tailwindConfig = require('./tailwind.config.js');
 
 // const cssbeautify = require('gulp-cssbeautify');
 const minifycss = require('gulp-clean-css');
@@ -19,41 +21,40 @@ const minifycss = require('gulp-clean-css');
 //
 const path = {
     view: './**/*.php',
-    dev: './dev-css/**/*.css',
+    dev: './dev-css/**/[^_]*.css',
     dest: './css/',
 };
 
 function cssFunc() {
-    return gulp
-        .src([path.dev])
-        .pipe(
-            plumber({
-                errorHandler: notify.onError('Error: <%= error.message %>'),
-            })
-        )
-        .pipe(postcss([
-            tailwindcss(tailwindConfig),
-            autoprefixer
-        ]))
-        // .pipe(
-        //     cssbeautify({
-        //         indent: '\t',
-        //     })
-        // )
-		.pipe(minifycss())
-        .pipe(gulp.dest(path.dest))
-        .pipe(browserSync.stream());
+    return (
+        gulp
+            .src([path.dev])
+            .pipe(
+                plumber({
+                    errorHandler: notify.onError('Error: <%= error.message %>'),
+                })
+            )
+            .pipe(postcss([tailwindcss(tailwindConfig), autoprefixer, postcssImport, postcssNested]))
+            // .pipe(
+            //     cssbeautify({
+            //         indent: '\t',
+            //     })
+            // )
+            .pipe(minifycss())
+            .pipe(gulp.dest(path.dest))
+            .pipe(browserSync.stream())
+    );
 }
 
 function connectSync() {
     connect.server(
         {
-            port: 8001,
+            port: 9999,
             base: '../Tailwind-local-1/',
         },
         function () {
             browserSync({
-                proxy: 'localhost:8001/',
+                proxy: 'localhost:9999/',
                 // , startPath: 'service/index.php'
                 ghostMode: false,
             });

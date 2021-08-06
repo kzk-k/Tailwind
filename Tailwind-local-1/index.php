@@ -14,8 +14,7 @@
     <link rel="shortcut icon" href="/favicon.ico">
 
     <link rel="stylesheet" href="css/tailwind.css">
-    <link rel="stylesheet" href="css/global.css">
-    <link rel="stylesheet" href="css/pages/index.css">
+    <link rel="stylesheet" href="css/top/index.css">
 </head>
 
 <body>

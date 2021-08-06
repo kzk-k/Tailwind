@@ -1,0 +1,10 @@
+@import '../_var';
+@import '../_global';
+
+.f-indexOnly {
+    display: flex;
+    margin-top: 200px;
+    p {
+        display: flex;
+    }
+}
