@@ -11,11 +11,11 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.webpackConfig({
-    watchOptions: {
-        ignored: /node_modules/,
-    },
-});
+// mix.webpackConfig({
+//     watchOptions: {
+//         ignored: /node_modules/,
+//     },
+// });
 
 mix.setPublicPath('public')
     // .js('resources/js/app.js', 'js')
@@ -25,9 +25,13 @@ mix.setPublicPath('public')
     .options({
         postCss: [require('tailwindcss'), require('autoprefixer')],
         processCssUrls: false,
+        hmrOptions: {
+            host: 'localhost',
+            port: '8081',
+        },
     })
     .browserSync({
-        files: ['./**/*.php', './**/*.css'],
+        files: ['./**/*.php', './public/**/*.css'],
         proxy: 'http://127.0.0.1:8080/',
         startPath: 'resources/views/top/index.php',
     })
