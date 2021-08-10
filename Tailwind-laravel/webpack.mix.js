@@ -11,11 +11,24 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.js('resources/js/app.js', 'public/js')
-    .vue()
-    .postCss('resources/css/app.css', 'public/css')
+mix.webpackConfig({
+    watchOptions: {
+        ignored: /node_modules/,
+    },
+});
+
+mix.setPublicPath('public')
+    // .js('resources/js/app.js', 'js')
+    // .vue()
+    .postCss('resources/css/tailwind.css', 'css/')
+    .postCss('resources/css/top/style.css', 'css/top/')
     .options({
         postCss: [require('tailwindcss'), require('autoprefixer')],
         processCssUrls: false,
+    })
+    .browserSync({
+        files: ['./**/*.php', './**/*.css'],
+        proxy: 'http://127.0.0.1:8080/',
+        startPath: 'resources/views/top/index.php',
     })
     .disableNotifications();

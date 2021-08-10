@@ -1,30 +1,30 @@
 {
-  "name": "test",
-  "scripts": {
-    "gulp": "gulp --no-notify",
-    "tc": "tailwind-config-viewer -o --port 4000",
-    "dev": "npm run gulp & npm run tc"
-  },
-  "dependencies": {
-    "@tailwindcss/forms": "^0.3.3",
-    "@tailwindcss/line-clamp": "^0.2.1",
-    "autoprefixer": "^10.3.1",
-    "browser-sync": "^2.27.5",
-    "cssbeautify": "^0.3.1",
-    "gulp": "^4.0.2",
-    "gulp-cached": "^1.1.1",
-    "gulp-clean-css": "^4.3.0",
-    "gulp-connect-php": "1.0.3",
-    "gulp-cssbeautify": "^3.0.0",
-    "gulp-notify": "^4.0.0",
-    "gulp-plumber": "^1.2.1",
-    "gulp-postcss": "^9.0.0",
-    "postcss-import": "^14.0.2",
-    "postcss-nested": "^5.0.6",
-    "tailwindcss": "^2.2.7"
-  },
-  "devDependencies": {
-    "@tailwindcss/jit": "^0.1.18",
-    "tailwind-config-viewer": "^1.6.2"
-  }
+    "name": "test",
+    "scripts": {
+        "gulp": "gulp --no-notify",
+        "tc": "tailwind-config-viewer -o --port 4000",
+        "dev": "npm run gulp & npm run tc"
+    },
+    "dependencies": {
+        "tailwindcss": "^2.2.7"
+    },
+    "devDependencies": {
+        "@tailwindcss/forms": "^0.3.3",
+        "@tailwindcss/jit": "^0.1.18",
+        "@tailwindcss/line-clamp": "^0.2.1",
+        "autoprefixer": "^10.3.1",
+        "browser-sync": "^2.27.5",
+        "cssbeautify": "^0.3.1",
+        "gulp": "^4.0.2",
+        "gulp-cached": "^1.1.1",
+        "gulp-clean-css": "^4.3.0",
+        "gulp-connect-php": "^1.0.3",
+        "gulp-cssbeautify": "^3.0.0",
+        "gulp-notify": "^4.0.0",
+        "gulp-plumber": "^1.2.1",
+        "gulp-postcss": "^9.0.0",
+        "postcss-import": "^14.0.2",
+        "postcss-nested": "^5.0.6",
+        "tailwind-config-viewer": "^1.6.2"
+    }
 }

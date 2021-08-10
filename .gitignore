@@ -1,1 +1,4 @@
 node_modules
+mix-manifest.json
+Tailwind-laravel/public/css
+Tailwind-local-1/public/css

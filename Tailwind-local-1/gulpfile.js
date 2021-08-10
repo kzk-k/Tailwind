@@ -21,8 +21,8 @@ const minifycss = require('gulp-clean-css');
 //
 const path = {
     view: './**/*.php',
-    dev: './dev-css/**/[^_]*.css',
-    dest: './css/',
+    dev: './resources/css/**/[^_]*.css',
+    dest: './public/css/',
 };
 
 function cssFunc() {

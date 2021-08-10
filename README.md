@@ -1,6 +1,6 @@
 # Tailwind-local-1
 
-### フレームワークを使わない php、プレーン html、gulp
+### フレームワークを使わないphp、プレーンhtml、gulp
 
 `cd Tailwind-local-1`  
 `npm i`  
