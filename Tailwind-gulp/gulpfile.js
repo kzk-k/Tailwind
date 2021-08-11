@@ -50,12 +50,12 @@ function connectSync() {
     connect.server(
         {
             port: 9999,
-            base: '../Tailwind-local-1/',
+            base: '../Tailwind-gulp/',
         },
         function () {
             browserSync({
                 proxy: 'localhost:9999/',
-                // , startPath: 'service/index.php'
+                // , startPath: 'service/'
                 ghostMode: false,
             });
         }

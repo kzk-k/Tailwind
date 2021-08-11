@@ -1,9 +1,10 @@
 {
     "private": true,
     "scripts": {
+        "php": "php -S 127.0.0.1:9999",
         "dev": "npm run development",
         "development": "mix",
-        "watch": "mix watch"
+        "watch": "npm run php & mix watch"
     },
     "dependencies": {
         "tailwindcss": "^2.2.7"

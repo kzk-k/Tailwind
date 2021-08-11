@@ -1,7 +1,7 @@
 module.exports = {
     mode: 'jit',
     enabled: true,
-    purge: ['./resources/**/*.{js,vue,blade.php}'],
+    purge: ['./resources/views/**/*.{js,vue,blade.php,php}'],
     darkMode: false, // or 'media' or 'class'
     theme: {
         extend: {},

@@ -6,7 +6,7 @@
 <html lang="ja">
 
 <head>
-    <title>Laravel Mix</title>
+    <title>Tailwind- Laravel Mix</title>
     <link rel="stylesheet" href="/public/css/tailwind.css" />
     <link rel="stylesheet" href="/public/css/top/style.css" />
 </head>

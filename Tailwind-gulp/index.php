@@ -8,7 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>トップ | 株式会社Tailwind</title>
+    <title>Tailwind Gulp- Laravel Mix</title>
     <meta name="description" content="">
     <meta name="Keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">

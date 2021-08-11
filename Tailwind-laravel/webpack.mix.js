@@ -11,11 +11,11 @@ const mix = require('laravel-mix');
  |
  */
 
-// mix.webpackConfig({
-//     watchOptions: {
-//         ignored: /node_modules/,
-//     },
-// });
+mix.webpackConfig({
+    watchOptions: {
+        ignored: /node_modules/,
+    },
+});
 
 mix.setPublicPath('public')
     // .js('resources/js/app.js', 'js')
@@ -27,12 +27,12 @@ mix.setPublicPath('public')
         processCssUrls: false,
         hmrOptions: {
             host: 'localhost',
-            port: '8081',
+            port: '5000',
         },
     })
     .browserSync({
-        files: ['./**/*.php', './public/**/*.css'],
-        proxy: 'http://127.0.0.1:8080/',
-        startPath: 'resources/views/top/index.php',
+        files: ['resources/**/*.php', './public/**/*.css'],
+        proxy: 'http://127.0.0.1:9999/',
+        startPath: 'resources/views/top/',
     })
     .disableNotifications();
