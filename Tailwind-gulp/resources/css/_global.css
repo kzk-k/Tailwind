@@ -1,5 +1,7 @@
 .l-header {
     text-align: center;
+    /* display: flex; */
+    display: grid;
 }
 
 .l-footer {

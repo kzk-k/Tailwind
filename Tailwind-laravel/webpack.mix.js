@@ -23,7 +23,12 @@ mix.setPublicPath('public')
     .postCss('resources/css/tailwind.css', 'css/')
     .postCss('resources/css/top/style.css', 'css/top/')
     .options({
-        postCss: [require('tailwindcss'), require('autoprefixer')],
+        postCss: [
+            require('tailwindcss'),
+            require('autoprefixer')({
+                grid: true,
+            }),
+        ],
         processCssUrls: false,
         hmrOptions: {
             host: 'localhost',

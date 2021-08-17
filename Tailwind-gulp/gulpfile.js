@@ -8,6 +8,7 @@ const connect = require('gulp-connect-php');
 const browserSync = require('browser-sync');
 
 // css
+const progeny = require('gulp-progeny');
 const autoprefixer = require('autoprefixer');
 const postcss = require('gulp-postcss');
 const postcssImport = require('postcss-import');
@@ -21,20 +22,21 @@ const minifycss = require('gulp-clean-css');
 //
 const path = {
     view: './**/*.php',
-    dev: './resources/css/**/[^_]*.css',
+    css: './resources/css/**/*.css',
     dest: './public/css/',
 };
 
 function cssFunc() {
     return (
         gulp
-            .src([path.dev])
+            .src([path.css])
             .pipe(
                 plumber({
                     errorHandler: notify.onError('Error: <%= error.message %>'),
                 })
             )
-            .pipe(postcss([tailwindcss(tailwindConfig), autoprefixer, postcssImport, postcssNested]))
+            .pipe(progeny())
+            .pipe(postcss([tailwindcss(tailwindConfig), autoprefixer({ grid: true }), postcssImport, postcssNested]))
             // .pipe(
             //     cssbeautify({
             //         indent: '\t',
@@ -69,7 +71,7 @@ function reload(done) {
 
 function watchFiles() {
     gulp.watch(path.view, gulp.series(cssFunc, reload));
-    gulp.watch(path.dev, cssFunc);
+    gulp.watch(path.css, cssFunc);
 }
 
 exports.default = gulp.parallel([watchFiles, connectSync]);
