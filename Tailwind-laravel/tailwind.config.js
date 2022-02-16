@@ -1,8 +1,10 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+    // mode: 'jit',
+    // purge: ['./resources/views/**/*.{js,vue,blade.php,php}'],
     content: ['./resources/views/**/*.{js,vue,blade.php,php}'],
-    darkMode: false, // or 'media' or 'class'
+    darkMode: 'media',
     theme: {
         colors: {
             bland: 'var(--color-bland)',
