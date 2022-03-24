@@ -1,30 +1,24 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-    // mode: 'jit',
-    // purge: ['./resources/views/**/*.{js,vue,blade.php,php}'],
     content: ['./resources/views/**/*.{js,vue,blade.php,php}'],
     darkMode: 'media',
     theme: {
-        colors: {
-            bland: 'var(--color-bland)',
-            // defaultThemeを使うときはmy-を付けて両方活かす
-            gray: {
-                1: '#eee',
-                2: '#333',
-                3: '#666',
+        extend: {
+            colors: {
+                baseColor: 'var(--color-base)',
+                bland: 'var(--color-bland)',
+                lightGray: {
+                    1: 'var(--color-light-gray-1)',
+                    2: 'var(--color-light-gray-2)',
+                },
+                gray: {
+                    1: 'var(--color-gray-1)',
+                    2: 'var(--color-gray-2)',
+                    3: 'var(--color-gray-3)',
+                    4: 'var(--color-gray-4)',
+                },
             },
-            red: {
-                1: '#dc3545',
-            },
-            blue: {
-                1: '#283b64',
-            },
-            // ...defaultTheme.colors,
-            // defaultThemeを消したときに使うやつ
-            transparent: 'transparent',
-            current: 'currentColor',
-            white: '#fff',
         },
         fontFamily: {
             roboto: 'var(--font-roboto)',
