@@ -1,3 +1,3 @@
 <header class="l-header">
-    header
+    <div class="hidden md:block">header</div>
 </header>

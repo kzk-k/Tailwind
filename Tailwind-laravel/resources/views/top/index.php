@@ -7,8 +7,7 @@
 
 <head>
     <title>Tailwind- Laravel Mix</title>
-    <link rel="stylesheet" href="/public/css/tailwind.css" />
-    <link rel="stylesheet" href="/public/css/top/style.css" />
+    <link rel="stylesheet" href="/public/css/app.css" />
 </head>
 
 <body>

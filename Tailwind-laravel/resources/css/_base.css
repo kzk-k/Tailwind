@@ -1,0 +1,17 @@
+@tailwind base;
+
+@layer base {
+	html {
+		overflow-x: hidden;
+		font-family: var(--font-base);
+		font-weight: 500;
+		color: var(--color-base);
+		word-break: break-all;
+		word-wrap: break-word;
+		-webkit-text-size-adjust: 100%;
+		-webkit-font-smoothing: antialiased;
+	}
+	img {
+		@apply max-h-full;
+	}
+}

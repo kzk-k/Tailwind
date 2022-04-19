@@ -1,0 +1,10 @@
+@tailwind components;
+
+@layer components {
+	.btn-white {
+		@apply w-full bg-white rounded h-12 text-lg text-bland;
+	}
+	.btn-glass {
+		@apply w-full backdrop-filter backdrop-blur-lg bg-opacity-60 bg-white rounded;
+	}
+}

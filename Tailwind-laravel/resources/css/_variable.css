@@ -1,0 +1,18 @@
+:root {
+	--font-base: '-apple-system', 'ヒラギノ角ゴ Pro W3',
+		'Hiragino Kaku Gothic Pro', '游ゴシック', YuGothic, 'メイリオ', Meiryo,
+		sans-serif;
+	--color-base: #222;
+	--color-bland: #43b1b5;
+	--color-light-gray-1: #f8f8f8;
+	--color-light-gray-2: #eee;
+	--color-light-gray-3: #ddd;
+	--color-gray-1: #ccc;
+	--color-gray-2: #aaa;
+	--color-gray-3: #888;
+	--color-gray-4: #666;
+	--z-index-reset: 0;
+	--z-index-util: 1;
+	--z-index-overlay: 20;
+	--z-index-modal: 30;
+}
